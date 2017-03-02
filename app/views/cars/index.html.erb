@@ -1,0 +1,20 @@
+<div ng-app="app">
+
+  <div ng-controller="carsCtrl" ng-init="setup()">
+    <h1>Number of Cars: {{cars.length}}</h1>
+    <div ng-repeat="car in cars">
+       <h2 ng-click="toggleBio(car)"> Car Name: {{car.name}}</h2>
+      <p>Manufacturer: {{car.manufacturer}}</p>
+      <button ng-click="deleteCar($index)">Delete Car</button>
+    </div>
+    Add Car:
+    <div>
+      Name: <input ng-model="carName">
+      Model: <input ng-model = "carModel">
+      Manufacturer: <input ng-model = "carManufacturer">
+      Speed: <input ng-model="carSpeed">
+
+      <button ng-click="addCar(carName, carModel, carManufacturer, carSpeed)">Add Car</button>
+    </div>
+  </div>
+</div>

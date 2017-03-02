@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/cars", to:'cars#index'
+
 end
